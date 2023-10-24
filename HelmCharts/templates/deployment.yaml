@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: {{ .Release.Name }}
+  name: '{{ .Release.Name }}-deployment'
+spec:
+  replicas: {{ .Values.app.replicas}}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+      - image: '{{ .Values.container.image}}:{{ .Values.container.version}}'
+        name: {{ .Release.Name }}
+        ports:
+          - containerPort: 5001
+      # imagePullSecrets:
+      # - name: regcred
