@@ -1,11 +1,3 @@
-# Cluster
-variable "k8s_context" {
-  description = "The name of the k8s context to use"
-  type        = string
-  default     = "docker-desktop"
-}
-
-# ArgoCD
 variable "argocd_repo" {
   description = "The URL of the ArgoCD Helm Chart repository"
   type        = string
