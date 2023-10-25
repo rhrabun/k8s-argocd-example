@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: api1
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  destination:
+    name: in-cluster
+    namespace: api1
+  source:
+    path: "HelmCharts/ApiChart"
+    repoURL: "git@github.com:rhrabun/k8s-argocd-example.git"
+    targetRevision: HEAD
+  helm:
+    valueFiles:
+      - values.yaml
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
