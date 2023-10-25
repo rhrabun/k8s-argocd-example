@@ -12,7 +12,7 @@ spec:
     namespace: api1
   source:
     path: "HelmCharts/ApiChart"
-    repoURL: "git@github.com:rhrabun/k8s-argocd-example.git"
+    repoURL: "https://github.com/rhrabun/k8s-argocd-example.git"
     targetRevision: HEAD
     helm:
       valueFiles:
