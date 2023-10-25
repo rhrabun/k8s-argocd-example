@@ -19,7 +19,7 @@ spec:
         - values_prod.yaml
       parameters:
         - name: "app.replicas"
-          value: '2'
+          value: "4"
   syncPolicy:
     automated:
       prune: true
