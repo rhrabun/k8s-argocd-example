@@ -14,9 +14,9 @@ spec:
     path: "HelmCharts/ApiChart"
     repoURL: "git@github.com:rhrabun/k8s-argocd-example.git"
     targetRevision: HEAD
-  helm:
-    valueFiles:
-      - values.yaml
+    helm:
+      valueFiles:
+        - values.yaml
   syncPolicy:
     automated:
       prune: true

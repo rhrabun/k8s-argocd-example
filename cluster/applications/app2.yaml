@@ -14,12 +14,12 @@ spec:
     path: "HelmCharts/ApiChart"
     repoURL: "git@github.com:rhrabun/k8s-argocd-example.git"
     targetRevision: HEAD
-  helm:
-    valueFiles:
-      - values_prod.yaml
-    parameters:
-      - name: "app.replicas"
-        value: 2
+    helm:
+      valueFiles:
+        - values_prod.yaml
+      parameters:
+        - name: "app.replicas"
+          value: 2
   syncPolicy:
     automated:
       prune: true
