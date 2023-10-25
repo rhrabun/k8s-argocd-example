@@ -7,5 +7,5 @@ module "argocd_main_app" {
   source     = "./argocd_main_app"
 
   git_path    = "cluster/applications"
-  git_repoURL = "git@github.com:rhrabun/k8s-argocd-example.git"
+  git_repoURL = "https://github.com/rhrabun/k8s-argocd-example.git"
 }
