@@ -4,8 +4,9 @@ Example project for learning ArgoCD integration.
 
 The idea is to have fully automated CD system for K8s cluster:
 * Main ArgoCD controller, which manages other 'worker' controllers;
-* Worker ArgoCD controllers, which manage applications hosted in the K8s cluster;
-* Applications defined with the Helm Charts for customization convenience.
+* Worker ArgoCD controllers which manage applications, written in Helm Charts & hosted in the K8s cluster;
+* Applications defined with the Helm Charts for customization convenience;
+* Everything can be easily installed with the help of Terrafom.
 
 
 ### How-To
